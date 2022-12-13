@@ -1,0 +1,4 @@
+galaxy s8+ = admin reply -> radio button
+galaxy fold = admin reply
+
+admin complaint & student complaint = min width = 600px
