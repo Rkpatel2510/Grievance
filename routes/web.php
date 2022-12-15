@@ -18,6 +18,8 @@ use App\Http\Controllers\studentviewpageController;
 use App\Http\Controllers\adminviewpageController;
 use App\Http\Controllers\forgetlinkController;
 use App\Http\Controllers\facultyemail;
+use App\Http\Controllers\infraEmail;
+use App\Http\Controllers\managementEmail;
 use App\Http\Controllers\placementEmail;
 use App\Http\Controllers\studentcomplaintlistController;
 use Illuminate\Support\Facades\Route;
@@ -59,3 +61,5 @@ Route::get('/forgetlink', [forgetlinkController::class, 'index']);
 
 Route::get('/femail', [facultyemail::class, 'index']);
 Route::get('/pemail', [placementEmail::class, 'index']);
+Route::get('/iemail', [infraEmail::class, 'index']);
+Route::get('/memail', [managementEmail::class, 'index']);

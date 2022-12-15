@@ -36,7 +36,8 @@
     </style>
 
     <div class="body flex-grow-1 px-3">
-      <div class="container-lg">       
+      <div class="container-lg">
+        <div class="car"> </div>
         <div class="card mb-4">
           <div class="card-header"><strong>Grievances</strong></div>
           <div class="card-body">

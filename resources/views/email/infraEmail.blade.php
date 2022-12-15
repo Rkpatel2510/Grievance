@@ -32,25 +32,25 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="2" class="m_6812616833884957853content m_6812616833884957853css-1pkv16o" style="vertical-align:top;margin:0;background:#fff;font-size:16px;line-height:24px;word-wrap:break-word;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;padding:20px 40px 40px 40px;border-radius:0 0 6px 6px"><span> Review the response to <strong>Complaint for placement</strong> below.<br><br>
+                                    <td colspan="2" class="m_6812616833884957853content m_6812616833884957853css-1pkv16o" style="vertical-align:top;margin:0;background:#fff;font-size:16px;line-height:24px;word-wrap:break-word;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;padding:20px 40px 40px 40px;border-radius:0 0 6px 6px"><span> Review the response to <strong>Complaint for Infrastructure</strong> below.<br><br>
                                             <div style="font-weight:bold;color:#222">Complaint id</div>
                                             <div>
-                                                <div style="white-space:pre-wrap">PL20220316</div>
+                                                <div style="white-space:pre-wrap">IN20220316</div>
                                             </div><br><br>
-                                            <div style="font-weight:bold;color:#222">Placement</div>
+                                            <div style="font-weight:bold;color:#222">Infrastracture</div>
                                             <div>
-                                                <div style="white-space:pre-wrap">Placed</div>
+                                                <div style="white-space:pre-wrap">Class rooms</div>
                                             </div>
                                             <br><br>
-                                            <div style="font-weight:bold;color:#222">SKP name</div>
+                                            <div style="font-weight:bold;color:#222"> Attech file</div>
                                             <div>
-                                                <div style="white-space:pre-wrap">abc company</div>
+                                                <div style="white-space:pre-wrap">image link</div>
                                             </div><br><br>
                                             <div style="font-weight:bold;color:#222">Grievance</div>
                                             <div>
                                                 <div>
                                                     <div>
-                                                        <p><span>Company does not pat salary on time</span></p>
+                                                        <p><span>Class rooms are not clear</span></p>
                                                     </div>
                                                 </div>
                                             </div><br><br>

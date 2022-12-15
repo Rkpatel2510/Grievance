@@ -25,7 +25,7 @@
                                         <table class="m_6812616833884957853css-8atqhb" style="border-spacing:0;width:100%">
                                             <tbody>
                                                 <tr>
-                                                    <td style="vertical-align:top;margin:0"><img src="https://ci4.googleusercontent.com/proxy/OOkicaNGnfwpdE96LqsPj8Dla3RHBpqos7QyYKkjjPK6IuJk4fmwGAndh-x7VcX9wztL8N4A2uEziu99yN9FgT8itpEGGfgiiARPGQ=s0-d-e1-ft#https://static.airtable.com/images/type_logo@116h.png?v=3" alt="Airtable" width="169" height="41" class="m_6812616833884957853css-hcjxqg CToWUd" style="max-width:100%;width:169px;height:41px;margin:0" data-bit="iit"></td>
+                                                    <td style="vertical-align:top;margin:0"><img src="{{url('images/STA.png')}}" alt="Logo" width="169" height="41" class="m_6812616833884957853css-hcjxqg CToWUd" style="max-width:100%;width:169px;height:41px;margin:0" data-bit="iit"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -54,7 +54,7 @@
                                             <div>
                                                 <div style="white-space:pre-wrap">I</div>
                                             </div><br><br>
-                                            <div style="font-weight:bold;color:#222">Complaint</div>
+                                            <div style="font-weight:bold;color:#222">Grievance</div>
                                             <div>
                                                 <div>
                                                     <div>
