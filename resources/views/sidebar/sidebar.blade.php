@@ -9,28 +9,28 @@
     </div>
     <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-title">Grievances to</li>
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/index">
+        <li class="nav-item"><a class="nav-link" href="/index/create">
 
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                 </svg> Dashboard</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/faculty">
+        <li class="nav-item"><a class="nav-link" href="/faculty/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
                 </svg> Faculty</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/infra">
+        <li class="nav-item"><a class="nav-link" href="/infra/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Infrastructure</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/management">
+        <li class="nav-item"><a class="nav-link" href="/management/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Management</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:8000/placement">
+        <li class="nav-item"><a class="nav-link" href="/placement/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Placement</a></li>

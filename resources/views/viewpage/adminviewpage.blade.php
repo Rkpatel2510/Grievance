@@ -63,7 +63,7 @@
                                                 <td>IT</td>
                                             </tr>
                                             <tr style="text-align: left;">
-                                                <th scope="col">Semester</th>
+                                                <th scope="col">Semester</th> 
                                                 <td>III</td>
                                             </tr>
                                             <tr style="text-align: left;">

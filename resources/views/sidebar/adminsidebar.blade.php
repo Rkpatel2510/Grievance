@@ -9,28 +9,28 @@
     </div>
     <ul class="sidebar-nav" data-coreui="navigation" data-simplebar="">
         <li class="nav-title">Grievances to</li>
-        <li class="nav-item"><a class="nav-link" href="/admin/complaint">
+        <li class="nav-item"><a class="nav-link" href="/admin/complaint/create">
 
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-speedometer"></use>
                 </svg> Dashboard</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="/admin/adminfaculty">
+        <li class="nav-item"><a class="nav-link" href="/admin/adminfaculty/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-drop"></use>
                 </svg> Faculty</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="/admin/admininfra">
+        <li class="nav-item"><a class="nav-link" href="/admin/admininfra/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Infrastructure</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="/admin/adminmanagement">
+        <li class="nav-item"><a class="nav-link" href="/admin/adminmanagement/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Management</a></li>
 
-        <li class="nav-item"><a class="nav-link" href="/admin/adminplacement">
+        <li class="nav-item"><a class="nav-link" href="/admin/adminplacement/create">
                 <svg class="nav-icon">
                     <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-pencil"></use>
                 </svg> Placement</a></li>

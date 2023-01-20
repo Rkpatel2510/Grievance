@@ -35,28 +35,37 @@
                 <div class="mb-3">
                     <div class="card mb-4 mx-4">
                         <div class="card-body p-4">
+                            <form action="/placement" method="POST">
+                                @csrf
 
-                            <h2 style="margin-bottom: 20px">Placement grievance</h2>
+                                @if($errors)
+                                @foreach($errors -> all() as $err)
+                                <label> {{$err}} </label>
+                                @endforeach
+                                @endif
 
-                            <input type="radio" name="age" value="60">
-                            <label for="age2">Placed</label>&nbsp;&nbsp;
-                            <input type="radio" name="age" value="100">
-                            <label for="age3">Unplaced</label>
-                            <p class="text-medium-emphasis"> </p>
+                                <h2 style="margin-bottom: 20px">Placement grievance</h2>
 
-                            <div class="input-group mb-4">
-                                <span class="input-group-text">
-                                    <i class="fa-solid fa-shop"></i> 
-                                </span>
-                                <input class="form-control" type="Text" placeholder="SKP Name">
-                            </div>
-                            
-                            <div class="input-group mb-3">
-                                <textarea class="form-control" type="text" placeholder="Write grievance here"></textarea>
-                            </div>
 
-                            <form action="student/complaint" method="$_POST">
-                                <button class="btn btn-primary px-4" type="submit" onclick="click()">SUBMIT</button>&nbsp;&nbsp;
+                                <input type="radio" name="gender" value="60">
+                                <label for="age2">Placed</label>&nbsp;&nbsp;
+                                <input type="radio" name="gender" value="100">
+                                <label for="age3">Unplaced</label>
+                                <p class="text-medium-emphasis"> </p>
+
+                                <div class="input-group mb-4">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-shop"></i>
+                                    </span>
+                                    <input class="form-control" type="Text" placeholder="SKP Name">
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
+                                </div>
+
+
+                                <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
 
                                 <button class="btn btn-secondary px-4" type="reset">CANCEL</button>
                             </form>
@@ -68,11 +77,6 @@
     </div>
 
     <script src="{{url('js/vendors/@coreui/coreui/js/coreui.bundle.min.js')}}"></script>
-    <script>
-        function click() {
-            windows.location.href = "/student/complaint";
-        }
-    </script>
 
 </body>
 

@@ -35,31 +35,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [loginController::class, 'index']);
-Route::get('/register', [registerController::class, 'index']);
+Route::resource('/', loginController::class);
+Route::resource('/register',registerController::class);
 
-Route::get('/index', [indexController::class, 'index']);
+Route::resource('/index', indexController::class);
 
-Route::get('/faculty', [facultyController::class, 'index']);
-Route::get('/infra', [infraController::class, 'index']);
-Route::get('/management', [managementController::class, 'index']);
-Route::get('/placement', [placementcontroller::class, 'index']);
+Route::resource('/faculty', facultyController::class);
+Route::resource('/infra', infraController::class);
+Route::resource('/management', managementController::class);
+Route::resource('/placement', placementcontroller::class);
 
-Route::get('/admin', [adminController::class, 'index']);
-Route::get('/admin/adminfaculty', [adminFaculty::class, 'index']);
-Route::get('/admin/admininfra', [adminInfrastructure::class, 'index']);
-Route::get('/admin/adminmanagement', [adminManagement::class, 'index']);
-Route::get('/admin/adminplacement', [adminPlacement::class, 'index']);
-Route::get('/admin/complaint', [adminviewController::class, 'index']);
-route::get('/admin/view', [adminviewpageController::class, 'index']);
+Route::resource('/admin', adminController::class);
+Route::resource('/admin/adminfaculty', adminFaculty::class);
+Route::resource('/admin/admininfra', adminInfrastructure::class);
+Route::resource('/admin/adminmanagement', adminManagement::class);
+Route::resource('/admin/adminplacement', adminPlacement::class);
+Route::resource('/admin/complaint', adminviewController::class);
+route::resource('/admin/view', adminviewpageController::class);
 
-Route::get('/student/view', [studentviewpageController::class, 'index']);
-Route::get('/student/complaint', [studentcomplaintlistController::class, 'index']);
+Route::resource('/student/view', studentviewpageController::class);
+Route::resource('/student/complaint', studentcomplaintlistController::class);
 
-Route::get('/forgetpassword', [forgetpasswordController::class, 'index']);
-Route::get('/forgetlink', [forgetlinkController::class, 'index']);
+Route::resource('/forgetpassword', forgetpasswordController::class);
+Route::resource('/forgetlink', forgetlinkController::class);
 
-Route::get('/femail', [facultyemail::class, 'index']);
-Route::get('/pemail', [placementEmail::class, 'index']);
-Route::get('/iemail', [infraEmail::class, 'index']);
-Route::get('/memail', [managementEmail::class, 'index']);
+Route::resource('/femail', facultyemail::class);
+Route::resource('/pemail', placementEmail::class);
+Route::resource('/iemail', infraEmail::class);
+Route::resource('/memail', managementEmail::class);

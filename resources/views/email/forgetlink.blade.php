@@ -18,7 +18,7 @@
                 <div class="col-md-5">
                     <div class="card mb-4 mx-4">
                         <div class="card-body p-4">
-                            <form action="login" method="$_POST">
+                            <form action="/" method="$_POST">
                                 @csrf
                                 <h1>Forgot password?</h1>
                                 <p >Reset password</p>

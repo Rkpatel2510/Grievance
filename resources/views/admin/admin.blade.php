@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
+
 <div class="bg-light min-vh-100 d-flex flex-row align-items-center">
   <div class="container">
     <div class="row justify-content-center">
@@ -18,8 +19,15 @@
         <div class="card-group d-block d-md-flex row">
           <div class="card col-md-12 p-4 mb-0">
             <div class="card-body">
-              <form action="admin/complaint" method="$_POST">
+              <form action="/admin" method="POST">
                 @csrf
+
+                @if($errors)
+                @foreach($errors -> all() as $err)
+                <label> {{$err}} </label>
+                @endforeach
+                @endif
+
                 <h1>Admin</h1>
                 <p class="text-medium-emphasis">Sign In to your account</p>
                 <div class="input-group mb-3">
@@ -28,21 +36,21 @@
                   </span>
 
 
-                  <input class="form-control" type="text" placeholder="Email">
+                  <input class="form-control" type="text" name="email" placeholder="Email">
                 </div>
                 <div class="input-group mb-4">
                   <span class="input-group-text">
 
                     <i class="fa fa-key"></i>
                   </span>
-                  <input class="form-control" type="password" placeholder="Password">
+                  <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn btn-primary px-4" onclick="hrefFunction()" type="submit">LOGIN</button>
+                    <button class="btn btn-primary px-4" type="submit">LOGIN</button>
                   </div>
                   <div class="col-6 text-end">
-                    <button class="btn btn-link px-0" type="button"><a href="/forgetpassword"> Forgot password?</a> </button>
+                    <button class="btn btn-link px-0" type="button"><a href="/forgetlink/create"> Forgot password?</a> </button>
                   </div>
                 </div>
               </form>
@@ -53,13 +61,6 @@
     </div>
   </div>
 </div>
-
-<!-- adminview page redirect -->
-<script>
-  function hrefFunction() {
-    windows.location.href = "/admin/complaint";
-  }
-</script>
 
 </body>
 

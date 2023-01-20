@@ -16,7 +16,7 @@
   @include('sidebar.sidebar')
 
   <div class="wrapper d-flex flex-column min-vh-100 bg-light">
-    
+
     <header class="header header-sticky mb-4">
       <div class="container-fluid">
         <button class="header-toggler px-md-0 me-md-3" type="button" onclick="coreui.Sidebar.getInstance(document.querySelector('#sidebar')).toggle()">
@@ -36,15 +36,23 @@
         <div class="mb-2">
           <div class="card mb-4 mx-4">
             <div class="card-body p-4">
-              <form action="student/complaint" method="$_POST">
+              <form action="/faculty" method="POST">
+                @csrf
+
+                @if($errors)
+                @foreach($errors -> all() as $err)
+                <label> {{$err}} </label>
+                @endforeach
+                @endif
+
                 <h2 style="margin-bottom: 20px;">Faculty grievance </h2>
-                
+
                 <div class="input-group mb-3">
                   <span class="input-group-text">
                     <i class="fa-solid fa-person"></i>
                   </span>
-                  <select class="form-select" aria-label="Default select example">
-                    <option selected>Select faculty name</option>
+                  <select class="form-select"  aria-label="Default select example">
+                    <option selected >Select faculty name</option>
                     <option value="1">Bhadresh shah</option>
                     <option value="2">Hardik Rabari</option>
                     <option value="3">Sanjay jaysawal</option>
@@ -53,14 +61,14 @@
 
                 <div class="input-group mb-3"><span class="input-group-text">
                     <i class="fa-solid fa-book"></i></span>
-                  <input class="form-control" type="text" placeholder="Subject">
+                  <input class="form-control" name="subject" type="text" placeholder="Subject">
                 </div>
                 <div class="Vertical"></div>
 
                 <div class="tab-content rounded-bottom">
                   <div class="p-3 preview select-ds-inln col-md">
                     <select class="form-select" aria-label="Default select example">
-                      <option selected="">Select vertical</option>
+                      <option selected >Select vertical</option>
                       <option value="1">BFSI</option>
                       <option value="2">IT</option>
                       <option value="3">MEPS</option>
@@ -80,11 +88,11 @@
                 </div>
 
                 <div class="input-group mb-3">
-                  <textarea class="form-control" type="text" placeholder="Write grievance here" rows="3"></textarea>
+                  <textarea class="form-control" name="grievance" type="text" placeholder="Write grievance here" rows="3"></textarea>
                 </div>
 
 
-                <button class="btn btn-primary px-4" type="submit" onclick="click()">SUBMIT</button>&nbsp;&nbsp;
+                <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
 
                 <button class="btn btn-secondary px-4" type="reset">CANCEL</button>
               </form>
@@ -95,11 +103,6 @@
     </div>
   </div>
 
-  <script>
-    function click() {
-      windows.location.href = "/student/complaint";
-    }
-  </script>
   <script src="{{url('js/vendors/@coreui/coreui/js/coreui.bundle.min.js')}}"></script>
 
 </body>

@@ -35,25 +35,33 @@
         <div class="mb-3">
           <div class="card mb-4 mx-4">
             <div class="card-body p-4">
+              <form action="/infra" method="POST">
+                @csrf
 
-              <h2 style="margin-bottom: 20px;">Infrastructure grievance </h2>
+                @if($errors)
+                @foreach($errors -> all() as $err)
+                <label> {{$err}} </label>
+                @endforeach
+                @endif
 
-              <div class="input-group mb-3"><span class="input-group-text">
-                  <i class="fa-solid fa-book"></i></span>
-                <input class="form-control" type="text" placeholder="Subject">
-              </div>
+                <h2 style="margin-bottom: 20px;">Infrastructure grievance </h2>
 
-              <div class="input-group mb-4">
-                <textarea class="form-control" type="text" placeholder="Write grievance here"></textarea>
-              </div>
+                <div class="input-group mb-3"><span class="input-group-text">
+                    <i class="fa-solid fa-book"></i></span>
+                  <input class="form-control" type="text" name="subject" placeholder="Subject">
+                </div>
 
-              <form action="/action_page.php">
-                <label for="myfile">Attach grievance file:</label>
-                <input type="file" id="myfile" name="myfile" multiple><br><br>
-              </form>
+                <div class="input-group mb-4">
+                  <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
+                </div>
 
-              <form action="student/complaint" method="$_POST">
-                <button class="btn btn-primary px-4" type="submit" onclick="click()">SUBMIT</button>&nbsp;&nbsp;
+                <!-- <form action="/action_page.php"> -->
+                  <label for="myfile">Attach grievance file:</label>
+                  <input type="file" id="myfile" name="myfile" multiple><br><br>
+                <!-- </form> -->
+
+
+                <button class="btn btn-primary px-4" type="submit" >SUBMIT</button>&nbsp;&nbsp;
                 <button class="btn btn-secondary px-4" type="reset">CANCEL</button>
               </form>
             </div>
@@ -64,10 +72,5 @@
   </div>
 
   <script src="{{url('js/vendors/@coreui/coreui/js/coreui.bundle.min.js')}}"></script>
-  <script>
-    function click() {
-      windows.location.href = "/student/complaint";
-    }
-  </script>
 
 </body>

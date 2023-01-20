@@ -30,7 +30,6 @@
             </div>
         </header>
 
-
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
                 <div class="example">
@@ -48,7 +47,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Faculty</h5>
                                                             <p class="card-text">Grievance for faculty</p>
-                                                            <a class="btn btn-primary" href="/faculty"> <i class="fa-solid fa-plus"></i> Add</a>
+                                                            <a class="btn btn-primary" href="/faculty/create"> <i class="fa-solid fa-plus"></i> Add</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -57,7 +56,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Infrastructure</h5>
                                                             <p class="card-text">Grievance for infrastructure</p>
-                                                            <a class="btn btn-primary" href="/infra"> <i class="fa-solid fa-plus"></i> Add</a>
+                                                            <a class="btn btn-primary" href="/infra/create"> <i class="fa-solid fa-plus"></i> Add</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -72,7 +71,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Management</h5>
                                                             <p class="card-text">Grievance for management</p>
-                                                            <a class="btn btn-primary" href="/management"> <i class="fa-solid fa-plus"></i> Add</a>
+                                                            <a class="btn btn-primary" href="/management/create"> <i class="fa-solid fa-plus"></i> Add</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -81,7 +80,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Placement</h5>
                                                             <p class="card-text">Grievance for placement</p>
-                                                            <a class="btn btn-primary" href="/placement"> <i class="fa-solid fa-plus"></i> Add</a>
+                                                            <a class="btn btn-primary" href="/placement/create"> <i class="fa-solid fa-plus"></i> Add</a>
                                                         </div>
                                                     </div>
                                                 </div>

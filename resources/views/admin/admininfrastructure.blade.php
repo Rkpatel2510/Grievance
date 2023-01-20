@@ -23,7 +23,7 @@
 
                 <ul class="header-nav ms-3">
                     <li>
-                        <a class="logout" href="/">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></a>
+                        <a class="logout" href="/admin">Logout &nbsp;<i class="fa-solid fa-right-from-bracket"></i></a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
                                                 <td>Infrastructure</td>
                                                 <td>6-10-2022 12:45</td>
                                                 <td>
-                                                    <a class="view" href="/admin/view"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
+                                                    <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
                                                     <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
                                                     <i class="fa-solid fa-trash" title="Delete grievance"></i>
                                                 </td>
@@ -68,7 +68,7 @@
                                                 <td>Infrastructure</td>
                                                 <td>6-10-2022 12:45</td>
                                                 <td>
-                                                    <a class="view" href="/admin/view"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
+                                                    <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
                                                     <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
                                                     <i class="fa-solid fa-trash" title="Delete grievance"></i>
                                                 </td>
@@ -78,7 +78,7 @@
                                                 <td>Infrastructure</td>
                                                 <td>6-10-2022 12:45</td>
                                                 <td>
-                                                    <a class="view" href="/admin/view"><i class="fa-solid fa-eye " style="padding-right: 15px;" title="View grievance"></i></a>
+                                                    <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye " style="padding-right: 15px;" title="View grievance"></i></a>
                                                     <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
                                                     <i class="fa-solid fa-trash" title="Delete grievance"></i>
                                                 </td>

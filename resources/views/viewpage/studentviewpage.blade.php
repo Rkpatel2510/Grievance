@@ -86,10 +86,5 @@
     </div>
 
     <script src="{{url('js/vendors/@coreui/coreui/js/coreui.bundle.min.js')}}"></script>
-    <!-- <script>
-        function click() {
-            windows.location.href = "/student/complaint";
-        }
-    </script> -->
 
 </body>
