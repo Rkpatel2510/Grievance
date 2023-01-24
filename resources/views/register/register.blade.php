@@ -76,12 +76,12 @@
                   <div class="p-3 preview select-ds-inln col-md">
                     <select name="semester" class="form-select" aria-label="Default select example">
                       <option selected="" value="">Semester</option>
-                      <option value="1">I</option>
-                      <option value="2">II</option>
-                      <option value="3">III</option>
-                      <option value="3">IV</option>
-                      <option value="3">V</option>
-                      <option value="3">VI</option>
+                      <option value="I">I</option>
+                      <option value="II">II</option>
+                      <option value="III">III</option>
+                      <option value="IV">IV</option>
+                      <option value="V">V</option>
+                      <option value="VI">VI</option>
                     </select>
                   </div>
                 </div>

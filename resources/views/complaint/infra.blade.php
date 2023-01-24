@@ -57,7 +57,7 @@
 
                 <!-- <form action="/action_page.php"> -->
                   <label for="myfile">Attach grievance file:</label>
-                  <input type="file" id="myfile" name="myfile" multiple><br><br>
+                  <input type="file" id="myfile" name="name" multiple><br><br>
                 <!-- </form> -->
 
 

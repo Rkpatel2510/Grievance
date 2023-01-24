@@ -24,21 +24,21 @@ class faculty extends FormRequest
     public function rules()
     {
         return [
+            'name' => 'required',
             'subject' => 'bail|required',
-            'grievance' => 'bail|required',
-            // 'name' => 'required',
-            // 'vertical' => 'bail|required',
-            // 'semester' => 'bail|required',
+            'vertical' => 'bail|required',
+            'semester' => 'bail|required',
+            'grievance' => 'bail|required'
         ];
     }
 
     public function messages()
     {
         return [
-            //    'name.required' => 'Please enter name',
-            //    'vertical.required' => 'Please enter vertical',
-            //    'semester.required' => 'Please enter semester',
+            'name.required' => 'Please enter name',
             'subject.required' => 'Please enter subject',
+            'vertical.required' => 'Please enter vertical',
+            'semester.required' => 'Please enter semester',
             'grievance.required' => 'Please enter grievance'
         ];
     }

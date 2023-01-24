@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class infra extends FormRequest
 {
@@ -26,6 +27,7 @@ class infra extends FormRequest
         return [
             'subject' => 'bail|required',
             'grievance' => 'bail|required',
+            'name' => 'bail|required',
         ];
     }
 
@@ -33,7 +35,8 @@ class infra extends FormRequest
     {
         return [
             'subject.required' => 'Please enter subject',
-            'grievance.required' => 'Please enter grievance'
+            'grievance.required' => 'Please enter grievance',
+            'name.required' => 'Please attach a file',
         ];
     }
 }

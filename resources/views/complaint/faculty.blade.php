@@ -51,11 +51,11 @@
                   <span class="input-group-text">
                     <i class="fa-solid fa-person"></i>
                   </span>
-                  <select class="form-select"  aria-label="Default select example">
-                    <option selected >Select faculty name</option>
-                    <option value="1">Bhadresh shah</option>
-                    <option value="2">Hardik Rabari</option>
-                    <option value="3">Sanjay jaysawal</option>
+                  <select class="form-select" name="name"  aria-label="Default select example">
+                    <option selected value="">Select faculty name</option>
+                    <option value="Bhadresh shah">Bhadresh shah</option>
+                    <option value="Hardik rabari">Hardik Rabari</option>
+                    <option value="Sanjay jayswal">Sanjay jaysawal</option>
                   </select>
                 </div>
 
@@ -67,22 +67,22 @@
 
                 <div class="tab-content rounded-bottom">
                   <div class="p-3 preview select-ds-inln col-md">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected >Select vertical</option>
+                    <select class="form-select" name="vertical" aria-label="Default select example">
+                      <option selected value="" >Select vertical</option>
                       <option value="1">BFSI</option>
                       <option value="2">IT</option>
                       <option value="3">MEPS</option>
                     </select>
                   </div>
                   <div class="p-3 preview select-ds-inln col-md">
-                    <select class="form-select" aria-label="Default select example">
-                      <option selected="">Select semester</option>
-                      <option value="1">I</option>
-                      <option value="2">II</option>
-                      <option value="3">III</option>
-                      <option value="3">IV</option>
-                      <option value="3">V</option>
-                      <option value="3">VI</option>
+                    <select class="form-select" name="semester" aria-label="Default select example">
+                      <option selected="" value="">Select semester</option>
+                      <option value="I">I</option>
+                      <option value="II">II</option>
+                      <option value="III">III</option>
+                      <option value="IV">IV</option>
+                      <option value="V">V</option>
+                      <option value="VI">VI</option>
                     </select>
                   </div>
                 </div>
