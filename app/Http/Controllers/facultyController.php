@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\faculty;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class facultyController extends Controller
 {
@@ -35,7 +36,18 @@ class facultyController extends Controller
      */
     public function store(Request $request, faculty  $reqVal)
     {
-        return view('viewpage.studentcomplaintlist');
+        $type = 1;
+        $no = "FL" .date("Y"."m"."d"."H"."i"."s");   
+        $s_id = $request->session()->get('s_id');
+        $name = $request->input('name');
+        $subject = $request->input('subject');
+        $vertical = $request->input('vertical');
+        $sem = $request->input('semester');
+        $grievance = $request->input('grievance');
+        DB::insert('insert into complaint (s_id,c_no,c_type,c_fname,c_fsubject,c_fvertical,c_fsem,c_complaint) values (?,?,?,?,?,?,?,?)', [$s_id,$no, $type, $name, $subject, $vertical, $sem, $grievance]);
+
+
+        return redirect('/student/complaint/create');
     }
 
     /**

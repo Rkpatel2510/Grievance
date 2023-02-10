@@ -60,7 +60,7 @@
                         <td>6-10-2022 12:45</td>
                         <td>
                           <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                          <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
+                          <!-- <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i> -->
                           <i class="fa-solid fa-trash" title="Delete grievance"></i>
                         </td>
                       </tr>
@@ -70,7 +70,7 @@
                         <td>6-10-2022 12:45</td>
                         <td>
                           <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                          <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
+                          <!-- <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i> -->
                           <i class="fa-solid fa-trash" title="Delete grievance"></i>
                         </td>
                       </tr>
@@ -79,8 +79,8 @@
                         <td>Faculty</td>
                         <td>6-10-2022 12:45</td>
                         <td>
-                          <a class="view" href="/admin/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                          <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
+                          <a class="view" href="/admin/view/edit/<?php echo $var['c_id']; ?>"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
+                          <!-- <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i> -->
                           <i class="fa-solid fa-trash" title="Delete grievance"></i>
                         </td>
                       </tr>

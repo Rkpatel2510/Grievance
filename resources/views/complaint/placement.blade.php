@@ -47,9 +47,9 @@
                                 <h2 style="margin-bottom: 20px">Placement grievance</h2>
 
 
-                                <input type="radio" name="gender" value="60">
+                                <input type="radio" name="gender" value="Placed">
                                 <label for="age2">Placed</label>&nbsp;&nbsp;
-                                <input type="radio" name="gender" value="100">
+                                <input type="radio" name="gender" value="Unplaced">
                                 <label for="age3">Unplaced</label>
                                 <p class="text-medium-emphasis"> </p>
 
@@ -57,7 +57,7 @@
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-shop"></i>
                                     </span>
-                                    <input class="form-control" type="Text" placeholder="SKP Name">
+                                    <input class="form-control" type="Text" name="skp" placeholder="SKP Name">
                                 </div>
 
                                 <div class="input-group mb-3">

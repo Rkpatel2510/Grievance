@@ -28,6 +28,12 @@
                   @endforeach
                   @endif
 
+                  @if(session()->has('status'))
+                  <div class="alert alert-danger">
+                  {{session()->get('status')}}
+                  </div>                 
+                  @endif
+
                   <h1>Login</h1>
                   <p class="text-medium-emphasis">Sign in to your account</p>
                   <div class="input-group mb-3"><span class="input-group-text">
@@ -75,5 +81,6 @@
   <script src="vendors/simplebar/js/simplebar.min.js"></script>
 
 </body>
+
 
 </html>

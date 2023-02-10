@@ -36,7 +36,8 @@
                 width: 100%;
             }
 
-            th,td {
+            th,
+            td {
                 border: 1px solid #DADCE0;
                 padding: 5px 20px;
             }
@@ -56,7 +57,16 @@
                                         <tbody>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance no.</th>
-                                                <td>IN20221006</td>
+                                                <td>
+                                                    <?php
+
+                                                    use Illuminate\Support\Facades\DB;
+
+                                                    $a = DB::select("select c_no from complaint where c_id = 24");
+                                                    print_r($a);
+                                                    // echo implode($a);
+                                                    ?>
+                                                </td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance subject</th>

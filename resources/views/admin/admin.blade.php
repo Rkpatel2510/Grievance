@@ -28,6 +28,12 @@
                 @endforeach
                 @endif
 
+                @if(session()->has('status'))
+                <div class="alert alert-danger">
+                  {{session()->get('status')}}
+                </div>
+                @endif
+
                 <h1>Admin</h1>
                 <p class="text-medium-emphasis">Sign In to your account</p>
                 <div class="input-group mb-3">

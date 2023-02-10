@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\placement;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class placementcontroller extends Controller
 {
@@ -35,7 +36,15 @@ class placementcontroller extends Controller
      */
     public function store(Request $request, placement $reqVal)
     {
-        return view('viewpage.studentcomplaintlist');
+        $type = 4;
+        $no = "PL" .date("Y"."m"."d"."H"."i"."s");
+        $s_id = $request->session()->get('s_id');
+        $placement = $request->input('gender');
+        $skp = $request->input('skp');
+        $grievance = $request->input('grievance');
+        DB::insert('insert into complaint (s_id,c_no,c_type,c_skpname,c_complaint,placement) values (?,?,?,?,?,?)', [$s_id,$no,$type, $skp, $grievance,$placement]);
+
+        return redirect('/student/complaint/create');
     }
 
     /**

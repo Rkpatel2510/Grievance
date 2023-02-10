@@ -25,7 +25,7 @@ class loginController extends Controller
      */
     public function create()
     {
-       
+        // 
     }
 
     /**
@@ -36,7 +36,22 @@ class loginController extends Controller
      */
     public function store(Request $request, login $reqVal)
     {
-        return view('index.index');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $records = DB::table('register')->where('s_email', $email)->where('password', $password)->first();
+        // $request->setLaravelSession(session());
+
+        if ($records) {
+            $request->session()->put('s_id', $records->s_id);
+            $request->session()->put('s_name', $records->s_name);
+            // echo "<pre>";
+            // print_r(session()->all());
+            // exit;
+            return redirect('index/create');
+        } else {
+            session()->flash('status', 'Invalid email or password');
+            return redirect('/');
+        }
     }
 
     /**

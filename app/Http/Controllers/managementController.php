@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\management;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class managementController extends Controller
 {
@@ -35,7 +36,14 @@ class managementController extends Controller
      */
     public function store(Request $request, management $reqVal)
     {
-        return view('viewpage.studentcomplaintlist');
+        $type = 3;
+        $no = "MN" .date("Y"."m"."d"."H"."i"."s");
+        $s_id = $request->session()->get('s_id');
+        $subject = $request->input('subject');
+        $grievance = $request->input('grievance');
+        DB::insert('insert into complaint (s_id,c_no,c_type,c_subject,c_complaint) values (?,?,?,?,?)', [$s_id,$no,$type, $subject, $grievance]);
+
+        return redirect('/student/complaint/create');
     }
 
     /**

@@ -37,12 +37,12 @@ class registerController extends Controller
     public function store(Request $request, registration $reqVa)
     {
         //this function called when we submit in register page
-        
+
 
         //validation
 
         //success - database insert
-    
+
         $name = $request->input('name');
         $email = $request->input('email');
         $contact = $request->input('contact');
@@ -51,9 +51,9 @@ class registerController extends Controller
         $year = $request->input('year');
         $sem = $request->input('semester');
         $password = rand(99999, 999999);
-         $test = DB::insert('insert into register (s_name,s_email,s_contact,s_enrollment,s_vertical,s_year,s_sem,password) values (?,?,?,?,?,?,?,?)', [$name, $email, $contact, $enrollment, $vertical, $year, $sem,$password]);
-        
-        
+        DB::insert('insert into register (s_name,s_email,s_contact,s_enrollment,s_vertical,s_year,s_sem,password) values (?,?,?,?,?,?,?,?)', [$name, $email, $contact, $enrollment, $vertical, $year, $sem, $password]);
+
+
         //session flash message => Your registration successful.
 
         //redirect -> login return redirect()z

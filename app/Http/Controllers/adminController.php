@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\admin;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class adminController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.admin');
     }
 
     /**
@@ -24,7 +25,7 @@ class adminController extends Controller
      */
     public function create()
     {
-        return view('admin.admin');
+        //
     }
 
     /**
@@ -35,7 +36,25 @@ class adminController extends Controller
      */
     public function store(Request $request, admin $reqVal)
     {
-        return view('viewpage.admincomplaint');
+        $email = $request->input('email');
+        $password = $request->input('password');
+        $records = DB::table('admin')->where('a_email', $email)->where('a_password', $password)->first();
+
+        // $request->setLaravelSession(session());
+
+        if ($records) {
+            $request->session()->put('a_id', $records->a_id);
+            $request->session()->put('a_name', $records->a_name);
+            // echo "<pre>";
+            // print_r(session()->all());  //s_id and s_name pn show thai 6 ae puchvanu 6
+            // exit;
+            return redirect('/admin/complaint/create');
+        } else {
+            session()->flash('status', 'Invalid email or password');
+            return redirect('/admin');
+        }
+
+        // return view('viewpage.admincomplaint');
     }
 
     /**

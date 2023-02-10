@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\infra;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class infracontroller extends Controller
 {
@@ -35,7 +36,15 @@ class infracontroller extends Controller
      */
     public function store(Request $request, infra  $reqVal)
     {
-        return view('viewpage.studentcomplaintlist');
+        $type = 2;
+        $no = "IN" .date("Y"."m"."d"."H"."i"."s");
+        $s_id = $request->session()->get('s_id');
+        $subject = $request->input('subject');
+        $grievance = $request->input('grievance');
+        $file = $request->input('name');
+        DB::insert('insert into complaint (s_id,c_no,c_type,c_subject,c_attach,c_complaint) values (?,?,?,?,?,?)', [$s_id,$no,$type, $subject, $file, $grievance]);
+
+        return redirect('/student/complaint/create');
     }
 
     /**
