@@ -57,23 +57,43 @@
                                         <tbody>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance no.</th>
-                                                <td><?=$records->c_no;?></td>
+                                                <td> {{$records->c_no;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance subject</th>
-                                                <td><?=$records->c_type;?></td>
+                                                <td> {{$records->c_type;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
-                                                <th scope="col">Date</th>
-                                                <td><?=$records->c_modified_dt;?></td>
+                                                <th scope="col">Faculy name</th>
+                                                <td> {{$records->c_fname;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
+                                                <th scope="col">Faculty subject</th>
+                                                <td> {{$records->c_fsubject;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
+                                                <th scope="col">Faculty semester</th>
+                                                <td> {{$records->c_fsem;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
+                                                <th scope="col">SKP name</th>
+                                                <td> {{$records->c_skpname;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
+                                                <th scope="col">Placement status</th>
+                                                <td> {{$records->placement;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Attach file</th>
-                                                <td><?=$records->c_attach;?></td>
+                                                <td> {{$records->c_attach;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance</th>
-                                                <td><?=$records->c_complaint;?></td>
+                                                <td> {{$records->c_complaint;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
+                                                <th scope="col">Date</th>
+                                                <td> {{$records->c_modified_dt;}}</td>
                                             </tr>
                                         </tbody>
                                     </table>

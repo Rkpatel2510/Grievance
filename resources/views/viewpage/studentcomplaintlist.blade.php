@@ -29,12 +29,6 @@
             </div>
         </header>
 
-        <style>
-            i {
-                cursor: pointer;
-            }
-        </style>
-
         <div class="body flex-grow-1 px-3">
             <div class="container-lg">
                 <div class="car"></div>
@@ -46,6 +40,7 @@
                                 <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-566">
                                     <table class="table table-bordered">
                                         <thead class="table-light" style="text-align: center;">
+
                                             <tr>
                                                 <th scope="col">Grievance no.</th>
                                                 <th scope="col">Subject</th>
@@ -55,24 +50,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php
-                                              //  print_r($records);
-                                                foreach($records as $value){
-                                                    ?>
-                                                    <tr style="text-align: center;">
-                                                <th scope="row"><?=$value->c_no;?></th>
-                                                <td><?=$value->c_type;?></td>
-                                                <td><?=$value->c_created_dt;?></td>
-                                                <td><?=$value->c_status;?></td>
+                                            @foreach($records as $value)
+                                            <tr style="text-align: center;">
+                                                <th scope="row"> {{$value->c_no;}}</th>
+                                                <td> {{$value->c_type;}}</td>
+                                                <td> {{$value->c_created_dt;}}</td>
+                                                <td> {{$value->c_status;}}</td>
                                                 <td>
-                                                    <a class="view" href="/student/complaint/<?=$value->c_id;?>"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
+                                                    <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
                                                     <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
                                                 </td>
-
                                             </tr>
-                                                    <?php
-                                                }
-                                            ?>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
