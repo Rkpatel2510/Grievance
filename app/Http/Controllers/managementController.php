@@ -43,7 +43,7 @@ class managementController extends Controller
         $grievance = $request->input('grievance');
         DB::insert('insert into complaint (s_id,c_no,c_type,c_subject,c_complaint) values (?,?,?,?,?)', [$s_id,$no,$type, $subject, $grievance]);
 
-        return redirect('/student/complaint/create');
+        return redirect('/student/complaint');
     }
 
     /**

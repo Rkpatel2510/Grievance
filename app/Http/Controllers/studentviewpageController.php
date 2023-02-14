@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class studentviewpageController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class studentviewpageController extends Controller
      */
     public function index()
     {
-        //
+      //
     }
 
     /**
@@ -22,8 +23,8 @@ class studentviewpageController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('viewpage.studentviewpage');
+    {     
+       
     }
 
     /**

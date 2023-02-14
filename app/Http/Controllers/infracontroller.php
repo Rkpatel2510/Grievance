@@ -44,7 +44,7 @@ class infracontroller extends Controller
         $file = $request->input('name');
         DB::insert('insert into complaint (s_id,c_no,c_type,c_subject,c_attach,c_complaint) values (?,?,?,?,?,?)', [$s_id,$no,$type, $subject, $file, $grievance]);
 
-        return redirect('/student/complaint/create');
+        return redirect('/student/complaint');
     }
 
     /**

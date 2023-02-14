@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class studentcomplaintlistController extends Controller
 {
@@ -13,7 +14,8 @@ class studentcomplaintlistController extends Controller
      */
     public function index()
     {
-        //
+        $records = DB::table('complaint')->get();
+        return view('viewpage.studentcomplaintlist', ['records' => $records]);
     }
 
     /**
@@ -23,7 +25,6 @@ class studentcomplaintlistController extends Controller
      */
     public function create()
     {
-        return view('viewpage.studentcomplaintlist');
     }
 
     /**
@@ -45,7 +46,9 @@ class studentcomplaintlistController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $records = DB::table('complaint')->where("c_id", $id)->first();
+        return view('viewpage.studentviewpage', ['records' => $records]);
     }
 
     /**

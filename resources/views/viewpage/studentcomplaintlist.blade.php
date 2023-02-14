@@ -55,39 +55,24 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr style="text-align: center;">
-                                                <th scope="row">IN20221006</th>
-                                                <td>Infrastructure</td>
-                                                <td>6-10-2022 14:25</td>
-                                                <td>Pending</td>
+                                            <?php
+                                              //  print_r($records);
+                                                foreach($records as $value){
+                                                    ?>
+                                                    <tr style="text-align: center;">
+                                                <th scope="row"><?=$value->c_no;?></th>
+                                                <td><?=$value->c_type;?></td>
+                                                <td><?=$value->c_created_dt;?></td>
+                                                <td><?=$value->c_status;?></td>
                                                 <td>
-                                                    <a class="view" href="/student/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
+                                                    <a class="view" href="/student/complaint/<?=$value->c_id;?>"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
                                                     <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
                                                 </td>
 
                                             </tr>
-                                            <tr style="text-align: center;">
-                                                <th scope="row">IN20221006</th>
-                                                <td>Infrastructure</td>
-                                                <td>6-10-2022 9:45</td>
-                                                <td>Pending</td>
-                                                <td>
-                                                    <a class="view" href="/student/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                                                    <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
-                                                </td>
-
-                                            </tr>
-                                            <tr style="text-align: center;">
-                                                <th scope="row">IN20221006</th>
-                                                <td>Infrastructure</td>
-                                                <td>6-10-2022 12:40</td>
-                                                <td>Pending</td>
-                                                <td>
-                                                    <a class="view" href="/student/view/create"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                                                    <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
-                                                </td>
-
-                                            </tr>
+                                                    <?php
+                                                }
+                                            ?>
                                         </tbody>
                                     </table>
                                 </div>

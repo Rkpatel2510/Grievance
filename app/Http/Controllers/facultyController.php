@@ -47,7 +47,7 @@ class facultyController extends Controller
         DB::insert('insert into complaint (s_id,c_no,c_type,c_fname,c_fsubject,c_fvertical,c_fsem,c_complaint) values (?,?,?,?,?,?,?,?)', [$s_id,$no, $type, $name, $subject, $vertical, $sem, $grievance]);
 
 
-        return redirect('/student/complaint/create');
+        return redirect('/student/complaint');
     }
 
     /**

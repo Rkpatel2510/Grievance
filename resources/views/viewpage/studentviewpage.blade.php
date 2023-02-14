@@ -57,32 +57,23 @@
                                         <tbody>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance no.</th>
-                                                <td>
-                                                    <?php
-
-                                                    use Illuminate\Support\Facades\DB;
-
-                                                    $a = DB::select("select c_no from complaint where c_id = 24");
-                                                    print_r($a);
-                                                    // echo implode($a);
-                                                    ?>
-                                                </td>
+                                                <td><?=$records->c_no;?></td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance subject</th>
-                                                <td>Infrastructur</td>
+                                                <td><?=$records->c_type;?></td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Date</th>
-                                                <td>6/10/2022 13:50</td>
+                                                <td><?=$records->c_modified_dt;?></td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Attach file</th>
-                                                <td>link</td>
+                                                <td><?=$records->c_attach;?></td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance</th>
-                                                <td>Class is not clean</td>
+                                                <td><?=$records->c_complaint;?></td>
                                             </tr>
                                         </tbody>
                                     </table>

@@ -53,7 +53,7 @@ Route::resource('/admin/adminplacement', adminPlacement::class);
 Route::resource('/admin/complaint', adminviewController::class);
 route::resource('/admin/view', adminviewpageController::class);
 
-Route::resource('/student/view', studentviewpageController::class);
+//Route::resource('/student/view', studentviewpageController::class);
 Route::resource('/student/complaint', studentcomplaintlistController::class);
 
 Route::resource('/forgetpassword', forgetpasswordController::class);
