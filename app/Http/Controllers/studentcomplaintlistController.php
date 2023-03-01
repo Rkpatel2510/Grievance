@@ -52,12 +52,13 @@ class studentcomplaintlistController extends Controller
      */
     public function show($id)
     {
-
         $records = DB::table('complaint')
         ->join('type', 'complaint.c_type', '=', 'type.t_id')
         ->select('type.t_name AS type', 'complaint.*')
+        ->where("c_id", $id)
         ->orderBy('c_created_dt','DESC')
         ->first();
+       
         return view('viewpage.studentviewpage', ['records' => $records]);
     }
 

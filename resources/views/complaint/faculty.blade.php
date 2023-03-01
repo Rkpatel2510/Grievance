@@ -30,7 +30,6 @@
         </ul>
       </div>
     </header>
-
     <div class="container">
       <div class="row justify-content-center">
         <div class="mb-2">
@@ -39,41 +38,50 @@
               <form action="/faculty" method="POST">
                 @csrf
 
-                @if($errors)
-                @foreach($errors -> all() as $err)
-                <label> {{$err}} </label>
-                @endforeach
-                @endif
-
                 <h2 style="margin-bottom: 20px;">Faculty grievance </h2>
 
                 <div class="input-group mb-3">
                   <span class="input-group-text">
                     <i class="fa-solid fa-person"></i>
                   </span>
-                  <select class="form-select" name="name"  aria-label="Default select example">
+                  <select class="form-select" name="name" aria-label="Default select example">
                     <option selected value="">Select faculty name</option>
                     <option value="Bhadresh shah">Bhadresh shah</option>
                     <option value="Hardik rabari">Hardik Rabari</option>
                     <option value="Sanjay jayswal">Sanjay jaysawal</option>
                   </select>
                 </div>
+                <span style="color : red">
+                  @error('name')
+                  {{$message}}
+                  @enderror
+                </span>
 
                 <div class="input-group mb-3"><span class="input-group-text">
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" name="subject" type="text" placeholder="Faculty subject" value="{{old('subject')}}">
                 </div>
-                <div class="Vertical"></div>
+                <span style="color : red">
+                  @error('subject')
+                  {{$message}}
+                  @enderror
+                </span>
 
+                <div class="Vertical"></div>
                 <div class="tab-content rounded-bottom">
                   <div class="p-3 preview select-ds-inln col-md">
                     <select class="form-select" name="vertical" aria-label="Default select example">
-                      <option selected value="" >Select vertical</option>
+                      <option selected value="">Select vertical</option>
                       <option value="1">BFSI</option>
                       <option value="2">IT</option>
                       <option value="3">MEPS</option>
                     </select>
                   </div>
+                  <span style="color : red">
+                    @error('vertical')
+                    {{$message}}
+                    @enderror
+                  </span>
                   <div class="p-3 preview select-ds-inln col-md">
                     <select class="form-select" name="semester" aria-label="Default select example">
                       <option selected="" value="">Select semester</option>
@@ -85,11 +93,21 @@
                       <option value="VI">VI</option>
                     </select>
                   </div>
+                  <span style="color : red">
+                    @error('semester')
+                    {{$message}}
+                    @enderror
+                  </span>
                 </div>
 
                 <div class="input-group mb-3">
-                  <textarea class="form-control"  name="grievance" type="text" placeholder="Write grievance here" value="{{old('grievance')}}" rows="3"></textarea>
+                  <textarea class="form-control" name="grievance" type="text" placeholder="Write grievance here" value="{{old('grievance')}}" rows="3"></textarea>
                 </div>
+                <span style="color : red">
+                  @error('grievance')
+                  {{$message}}
+                  @enderror
+                </span>
 
 
                 <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
