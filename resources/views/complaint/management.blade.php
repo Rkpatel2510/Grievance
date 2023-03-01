@@ -48,7 +48,7 @@
 
                 <div class="input-group mb-3"><span class="input-group-text">
                     <i class="fa-solid fa-book"></i></span>
-                  <input class="form-control" type="text" name="subject" placeholder="Subject">
+                  <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
 
                 <div class="input-group mb-4">

@@ -61,7 +61,7 @@
 
                 <div class="input-group mb-3"><span class="input-group-text">
                     <i class="fa-solid fa-book"></i></span>
-                  <input class="form-control" name="subject" type="text" placeholder="Subject">
+                  <input class="form-control" name="subject" type="text" placeholder="Faculty subject" value="{{old('subject')}}">
                 </div>
                 <div class="Vertical"></div>
 
@@ -88,7 +88,7 @@
                 </div>
 
                 <div class="input-group mb-3">
-                  <textarea class="form-control" name="grievance" type="text" placeholder="Write grievance here" rows="3"></textarea>
+                  <textarea class="form-control"  name="grievance" type="text" placeholder="Write grievance here" value="{{old('grievance')}}" rows="3"></textarea>
                 </div>
 
 

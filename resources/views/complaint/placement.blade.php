@@ -57,7 +57,7 @@
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-shop"></i>
                                     </span>
-                                    <input class="form-control" type="Text" name="skp" placeholder="SKP Name">
+                                    <input class="form-control" type="Text" name="skp" placeholder="SKP Name" value="{{old('skp')}}">
                                 </div>
 
                                 <div class="input-group mb-3">

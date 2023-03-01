@@ -49,7 +49,7 @@
                     <div class="card mb-4 mx-4">
                         <div class="card-body p-4">
 
-                            <h2 style="margin-bottom: 20px;">Grievance-Raxit</h2>
+                            <h2 style="margin-bottom: 20px;">{{$records->type;}}</h2>
 
                             <div class="example">
                                 <div class="tab-content rounded-bottom">
@@ -58,10 +58,6 @@
                                             <tr style="text-align: left;">
                                                 <th scope="col">Grievance no.</th>
                                                 <td> {{$records->c_no;}}</td>
-                                            </tr>
-                                            <tr style="text-align: left;">
-                                                <th scope="col">Grievance subject</th>
-                                                <td> {{$records->c_type;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
                                                 <th scope="col">Faculy name</th>
@@ -92,8 +88,8 @@
                                                 <td> {{$records->c_complaint;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
-                                                <th scope="col">Date</th>
-                                                <td> {{$records->c_modified_dt;}}</td>
+                                                <th scope="col">Date</th>                                             
+                                                <td> {{date('d F Y H:i', strtotime($records->c_modified_dt))}}</td>
                                             </tr>
                                         </tbody>
                                     </table>

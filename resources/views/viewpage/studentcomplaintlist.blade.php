@@ -53,8 +53,8 @@
                                             @foreach($records as $value)
                                             <tr style="text-align: center;">
                                                 <th scope="row"> {{$value->c_no;}}</th>
-                                                <td> {{$value->c_type;}}</td>
-                                                <td> {{$value->c_created_dt;}}</td>
+                                                <td> {{$value->type;}}</td>
+                                                <td> {{date('d F Y H:i', strtotime($value ->c_created_dt))}}</td>
                                                 <td> {{$value->c_status;}}</td>
                                                 <td>
                                                     <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
