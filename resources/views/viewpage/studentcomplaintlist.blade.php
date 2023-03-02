@@ -67,7 +67,9 @@
                                                 <td> {{$value->c_status;}}</td>
                                                 <td>
                                                     <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                                                    <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
+                                                    <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i> 
+                                                    <!-- &nbsp;&nbsp; -->
+                                                    <!-- <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-trash" style="padding-right: 15px;" title="Delete grievance"></i></a> -->
                                                 </td>
                                             </tr>
                                             @endforeach

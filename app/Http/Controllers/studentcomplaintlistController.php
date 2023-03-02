@@ -93,6 +93,10 @@ class studentcomplaintlistController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $deleted = DB::table('complaint')
+       ->where("c_id", $id)
+       ->delete();
+
+       return redirect('/student/complaint', ['deleted' => $deleted]);
     }
 }
