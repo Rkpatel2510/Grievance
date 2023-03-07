@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/custom.css')}}">
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -37,21 +38,20 @@
                         <div class="card-body p-4">
                             <form action="/placement" method="POST">
                                 @csrf
-
-                                @if($errors)
-                                @foreach($errors -> all() as $err)
-                                <label> {{$err}} </label>
-                                @endforeach
-                                @endif
-
                                 <h2 style="margin-bottom: 20px">Placement grievance</h2>
-
 
                                 <input type="radio" name="gender" value="Placed">
                                 <label for="age2">Placed</label>&nbsp;&nbsp;
                                 <input type="radio" name="gender" value="Unplaced">
                                 <label for="age3">Unplaced</label>
                                 <p class="text-medium-emphasis"> </p>
+                                <div class="validation-errors">
+                                    <span>
+                                        @error('gender')
+                                        {{$message}}
+                                        @enderror
+                                    </span>
+                                </div>
 
                                 <div class="input-group mb-4">
                                     <span class="input-group-text">
@@ -59,9 +59,23 @@
                                     </span>
                                     <input class="form-control" type="Text" name="skp" placeholder="SKP Name" value="{{old('skp')}}">
                                 </div>
+                                <div class="validation-errors">
+                                    <span>
+                                        @error('skp')
+                                        {{$message}}
+                                        @enderror
+                                    </span>
+                                </div>
 
                                 <div class="input-group mb-3">
                                     <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
+                                </div>
+                                <div class="validation-errors">
+                                    <span>
+                                        @error('grievance')
+                                        {{$message}}
+                                        @enderror
+                                    </span>
                                 </div>
 
 

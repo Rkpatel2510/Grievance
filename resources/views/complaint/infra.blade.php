@@ -39,12 +39,6 @@
               <form action="/infra" method="POST">
                 @csrf
 
-                <!-- @if($errors)
-                @foreach($errors -> all() as $err)
-                <label> {{$err}} </label>
-                @endforeach
-                @endif -->
-
                 <h2 style="margin-bottom: 20px;">Infrastructure grievance </h2>
 
                 <div class="input-group mb-3"><span class="input-group-text">
@@ -52,38 +46,38 @@
                   <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
                 <div class="validation-errors">
-                    <span>
-                      @error('subject')
-                      {{$message}}
-                      @enderror
-                    </span>
-                  </div>
+                  <span>
+                    @error('subject')
+                    {{$message}}
+                    @enderror
+                  </span>
+                </div>
 
                 <div class="input-group mb-4">
                   <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
                 </div>
                 <div class="validation-errors">
-                    <span>
-                      @error('grievance')
-                      {{$message}}
-                      @enderror
-                    </span>
-                  </div>
+                  <span>
+                    @error('grievance')
+                    {{$message}}
+                    @enderror
+                  </span>
+                </div>
 
                 <!-- <form action="/action_page.php"> -->
-                  <label for="myfile">Attach grievance file:</label>
-                  <input type="file" id="myfile" name="name" multiple><br><br>
-                  <div class="validation-errors">
-                    <span>
-                      @error('name')
-                      {{$message}}
-                      @enderror
-                    </span>
-                  </div>
+                <label for="myfile">Attach grievance file:</label>
+                <input type="file" id="myfile" name="name" multiple><br><br>
+                <div class="validation-errors">
+                  <span>
+                    @error('name')
+                    {{$message}}
+                    @enderror
+                  </span>
+                </div>
                 <!-- </form> -->
 
 
-                <button class="btn btn-primary px-4" type="submit" >SUBMIT</button>&nbsp;&nbsp;
+                <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
                 <button class="btn btn-secondary px-4" type="reset">CANCEL</button>
               </form>
             </div>

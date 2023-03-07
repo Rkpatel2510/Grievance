@@ -32,7 +32,7 @@ class placement extends FormRequest
     public function messages()
     {
         return [
-            'gender.required' => 'Please select Placed or Unplaced',
+            'gender.required' => 'Please select placed or unplaced',
             'grievance.required' => 'Please enter grievance'
         ];
     }

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/custom.css')}}">
   <link rel="stylesheet" href="css/vendors/simplebar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -37,22 +38,29 @@
             <div class="card-body p-4">
               <form action="/management" method="POST">
                 @csrf
-
-                @if($errors)
-                @foreach($errors -> all() as $err)
-                <label> {{$err}} </label>
-                @endforeach
-                @endif
-
                 <h2 style="margin-bottom: 20px;">Management grievance </h2>
 
                 <div class="input-group mb-3"><span class="input-group-text">
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
+                <div class="validation-errors">
+                  <span>
+                    @error('subject')
+                    {{$message}}
+                    @enderror
+                  </span>
+                </div>
 
                 <div class="input-group mb-4">
                   <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
+                </div>
+                <div class="validation-errors">
+                  <span>
+                    @error('grievance')
+                    {{$message}}
+                    @enderror
+                  </span>
                 </div>
 
                 <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
@@ -67,5 +75,5 @@
   </div>
 
   <script src="{{url('js/vendors/@coreui/coreui/js/coreui.bundle.min.js')}}"></script>
- 
+
 </body>
