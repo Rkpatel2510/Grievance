@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{URL::asset('css/custom.css')}}">
     <link rel="stylesheet" href="css/vendors/simplebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
@@ -66,10 +67,20 @@
                                                 <td> {{date('d F Y H:i', strtotime($value ->c_created_dt))}}</td>
                                                 <td> {{$value->c_status;}}</td>
                                                 <td>
-                                                    <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i></a>
-                                                    <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i> 
-                                                    <!-- &nbsp;&nbsp; -->
-                                                    <!-- <a class="view" href="/student/complaint/ {{$value->c_id;}}"><i class="fa-solid fa-trash" style="padding-right: 15px;" title="Delete grievance"></i></a> -->
+                                                    <a class="view" href="/student/complaint/{{$value->c_id;}}">
+                                                        <i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i>
+                                                    </a>
+                                                    <a class="view" href="/student/complaint/{{$value->c_id;}}/edit">
+                                                        <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
+                                                    </a>
+                                                    <form action="/student/complaint/{{$value->c_id;}}" method="POST">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button type="submit" class="dbn" >
+                                                           <a class="view" href=""><i class="fa-solid fa-trash" title="Delete grievance"></i></a>
+                                                        </button>
+                                                    </form>
+                                                    <!-- style="background-color:transparent; border-color:transparent;" -->
                                                 </td>
                                             </tr>
                                             @endforeach

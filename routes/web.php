@@ -63,3 +63,7 @@ Route::resource('/femail', facultyemail::class);
 Route::resource('/pemail', placementEmail::class);
 Route::resource('/iemail', infraEmail::class);
 Route::resource('/memail', managementEmail::class);
+
+Route::get('/abc', function () {
+    return view('complaint/facultyedit');
+});

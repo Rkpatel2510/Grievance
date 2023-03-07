@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
+  <link rel="stylesheet" href="{{URL::asset('css/custom.css')}}">
   <link rel="stylesheet" href="css/vendors/simplebar.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
@@ -38,11 +39,11 @@
               <form action="/infra" method="POST">
                 @csrf
 
-                @if($errors)
+                <!-- @if($errors)
                 @foreach($errors -> all() as $err)
                 <label> {{$err}} </label>
                 @endforeach
-                @endif
+                @endif -->
 
                 <h2 style="margin-bottom: 20px;">Infrastructure grievance </h2>
 
@@ -50,14 +51,35 @@
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
+                <div class="validation-errors">
+                    <span>
+                      @error('subject')
+                      {{$message}}
+                      @enderror
+                    </span>
+                  </div>
 
                 <div class="input-group mb-4">
                   <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
                 </div>
+                <div class="validation-errors">
+                    <span>
+                      @error('grievance')
+                      {{$message}}
+                      @enderror
+                    </span>
+                  </div>
 
                 <!-- <form action="/action_page.php"> -->
                   <label for="myfile">Attach grievance file:</label>
                   <input type="file" id="myfile" name="name" multiple><br><br>
+                  <div class="validation-errors">
+                    <span>
+                      @error('name')
+                      {{$message}}
+                      @enderror
+                    </span>
+                  </div>
                 <!-- </form> -->
 
 

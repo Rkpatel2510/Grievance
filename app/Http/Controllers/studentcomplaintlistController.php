@@ -15,10 +15,10 @@ class studentcomplaintlistController extends Controller
     public function index()
     {
         $records = DB::table('complaint')
-        ->join('type', 'complaint.c_type', '=', 'type.t_id')
-        ->select('type.t_name AS type', 'complaint.*')
-        ->orderBy('c_created_dt','DESC')
-        ->get();
+            ->join('type', 'complaint.c_type', '=', 'type.t_id')
+            ->select('type.t_name AS type', 'complaint.*')
+            ->orderBy('c_created_dt', 'DESC')
+            ->get();
         // print_r($records);
         // exit;
         return view('viewpage.studentcomplaintlist', ['records' => $records]);
@@ -53,12 +53,12 @@ class studentcomplaintlistController extends Controller
     public function show($id)
     {
         $records = DB::table('complaint')
-        ->join('type', 'complaint.c_type', '=', 'type.t_id')
-        ->select('type.t_name AS type', 'complaint.*')
-        ->where("c_id", $id)
-        ->orderBy('c_created_dt','DESC')
-        ->first();
-       
+            ->join('type', 'complaint.c_type', '=', 'type.t_id')
+            ->select('type.t_name AS type', 'complaint.*')
+            ->where("c_id", $id)
+            ->orderBy('c_created_dt', 'DESC')
+            ->first();
+
         return view('viewpage.studentviewpage', ['records' => $records]);
     }
 
@@ -70,7 +70,8 @@ class studentcomplaintlistController extends Controller
      */
     public function edit($id)
     {
-        //
+        echo 1;
+        exit;
     }
 
     /**
@@ -93,10 +94,9 @@ class studentcomplaintlistController extends Controller
      */
     public function destroy($id)
     {
-       $deleted = DB::table('complaint')
-       ->where("c_id", $id)
-       ->delete();
-
-       return redirect('/student/complaint', ['deleted' => $deleted]);
+        DB::table('complaint')
+            ->where("c_id", $id)
+            ->delete();
+        return redirect('/student/complaint');
     }
 }

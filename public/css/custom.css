@@ -23,3 +23,19 @@
 i {
   cursor: pointer;
 }
+
+.validation-errors {
+  display: block;
+  width: 100%;
+  color: red;
+}
+
+.dbn {
+  color: #374253;
+  background-color: transparent;
+  border-color: transparent;
+  /* display: inline; */
+  float: right;
+  padding: 0px 21px 2px 2px;
+  /* margin-bottom: 10px; */
+}
