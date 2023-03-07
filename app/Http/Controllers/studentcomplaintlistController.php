@@ -19,8 +19,7 @@ class studentcomplaintlistController extends Controller
             ->select('type.t_name AS type', 'complaint.*')
             ->orderBy('c_created_dt', 'DESC')
             ->get();
-        // print_r($records);
-        // exit;
+
         return view('viewpage.studentcomplaintlist', ['records' => $records]);
     }
 
@@ -70,8 +69,7 @@ class studentcomplaintlistController extends Controller
      */
     public function edit($id)
     {
-        echo 1;
-        exit;
+       return view('complaint.editpage');
     }
 
     /**
@@ -97,6 +95,7 @@ class studentcomplaintlistController extends Controller
         DB::table('complaint')
             ->where("c_id", $id)
             ->delete();
+
         return redirect('/student/complaint');
     }
 }
