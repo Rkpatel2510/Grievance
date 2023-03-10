@@ -30,6 +30,8 @@
                 </ul>
             </div>
         </header>
+
+        
         <div class="container">
             <div class="row justify-content-center">
                 <div class="mb-2">
@@ -43,46 +45,36 @@
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-person"></i>
                                     </span>
-
                                     <select class="form-select" name="name" aria-label="Default select example">
                                         <option selected value="">Select faculty name</option>
                                         <option value="Bhadresh shah">Bhadresh shah</option>
                                         <option value="Hardik rabari">Hardik Rabari</option>
                                         <option value="Sanjay jayswal">Sanjay jaysawal</option>
                                     </select>
-                                    <div class="validation-errors">
-                                        <span style="color : red">
-                                            @error('name')
-                                            {{$message}}
-                                            @enderror
-                                        </span>
-                                    </div>                                    
                                 </div>
 
-                                <div class="input-group mb-3"><span class="input-group-text">
-                                        <i class="fa-solid fa-book"></i></span>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">
+                                        <i class="fa-solid fa-book"></i>
+                                    </span>
                                     <input class="form-control" name="subject" type="text" placeholder="Faculty subject" value="{{old('subject')}}">
                                 </div>
-                                <div class=""></div>
-                                <span style="color : red">
-                                    @error('subject')
-                                    {{$message}}
-                                    @enderror
-                                </span>
+
+
                                 <div class="input-group mb-3">
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-book"></i>
                                     </span>
                                     <input class="form-control" type="text" name="subject" placeholder="Grievance subject" value="{{old('subject')}}">
                                 </div>
-                                
+
                                 <div class="input-group mb-4">
                                     <span class="input-group-text">
                                         <i class="fa-solid fa-shop"></i>
                                     </span>
                                     <input class="form-control" type="Text" name="skp" placeholder="SKP Name" value="{{old('skp')}}">
                                 </div>
-                                
+
                                 <input type="radio" name="gender" value="Placed">
                                 <label for="age2">Placed</label>&nbsp;&nbsp;
                                 <input type="radio" name="gender" value="Unplaced">
@@ -98,11 +90,6 @@
                                             <option value="2">IT</option>
                                             <option value="3">MEPS</option>
                                         </select>
-                                        <span style="color : red">
-                                            @error('vertical')
-                                            {{$message}}
-                                            @enderror
-                                        </span>
                                     </div>
 
                                     <div class="p-3 preview select-ds-inln col-md">
@@ -116,29 +103,20 @@
                                             <option value="VI">VI</option>
                                         </select>
                                     </div>
-                                    <span style="color : red">
-                                        @error('semester')
-                                        {{$message}}
-                                        @enderror
-                                    </span>
                                 </div>
 
                                 <label for="myfile">Attach grievance file:</label>
-                                <input type="file" id="myfile" name="name" multiple><br><br>
+                                <input type="file" id="myfile" name="filename" multiple><br><br>
 
                                 <div class="input-group mb-3">
                                     <textarea class="form-control" name="grievance" type="text" placeholder="Write grievance here" value="{{old('grievance')}}" rows="3"></textarea>
                                 </div>
-                                <span style="color : red">
-                                    @error('grievance')
-                                    {{$message}}
-                                    @enderror
-                                </span>
+
 
 
                                 <button class="btn btn-primary px-4" type="submit">SUBMIT</button>&nbsp;&nbsp;
-
                                 <button class="btn btn-secondary px-4" type="reset">CANCEL</button>
+
                             </form>
                         </div>
                     </div>

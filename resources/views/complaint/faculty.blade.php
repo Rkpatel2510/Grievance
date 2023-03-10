@@ -50,7 +50,7 @@
                     <option value="Hardik rabari">Hardik Rabari</option>
                     <option value="Sanjay jayswal">Sanjay jaysawal</option>
                   </select>
-                  <div class="validation-errors">
+                  <div class="validation-errors ">
                     <span>
                       @error('name')
                       {{$message}}
@@ -64,7 +64,7 @@
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" name="subject" type="text" placeholder="Faculty subject" value="{{old('subject')}}">
                 </div>
-                <div class="validation-errors">
+                <div class="validation-errors validation-errors2">
                   <span>
                     @error('subject')
                     {{$message}}
@@ -109,7 +109,7 @@
                 <div class="input-group mb-3">
                   <textarea class="form-control" name="grievance" type="text" placeholder="Write grievance here" value="{{old('grievance')}}" rows="3"></textarea>
                 </div>
-                <span class="validation-errors">
+                <span class="validation-errors validation-errors2">
                   @error('grievance')
                   {{$message}}
                   @enderror

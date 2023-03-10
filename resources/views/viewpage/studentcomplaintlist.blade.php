@@ -43,14 +43,16 @@
             <div class="container-lg">
                 <div class="car"></div>
                 <div class="card mb-4">
-                    <div class="card-header"><strong>Grievances</strong></div>
+                    <div class="card-header">
+                        <strong>Grievances</strong>
+                    </div>
                     <div class="card-body">
                         <div class="example">
                             <div class="tab-content rounded-bottom">
                                 <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-566">
                                     <table class="table table-bordered">
-                                        <thead class="table-light" style="text-align: center;">
 
+                                        <thead class="table-light" style="text-align: center;">
                                             <tr>
                                                 <th scope="col">Grievance no.</th>
                                                 <th scope="col">Subject</th>
@@ -59,6 +61,7 @@
                                                 <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
+                                        
                                         <tbody>
                                             @foreach($records as $value)
                                             <tr style="text-align: center;">
@@ -67,20 +70,20 @@
                                                 <td> {{date('d F Y H:i', strtotime($value ->c_created_dt))}}</td>
                                                 <td> {{$value->c_status;}}</td>
                                                 <td>
-                                                    <a class="view" href="/student/complaint/{{$value->c_id;}}">
-                                                        <i class="fa-solid fa-eye" style="padding-right: 15px;" title="View grievance"></i>
-                                                    </a>
-                                                    <a class="view" href="/student/complaint/{{$value->c_id;}}/edit">
-                                                        <i class="fa-solid fa-pen-to-square" style="padding-right: 15px;" title="Edit grievance"></i>
-                                                    </a>
-                                                    <form action="/student/complaint/{{$value->c_id;}}" method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" class="dbn" >
-                                                           <a class="view" href=""><i class="fa-solid fa-trash" title="Delete grievance"></i></a>
-                                                        </button>
-                                                    </form>
-                                                    <!-- style="background-color:transparent; border-color:transparent;" -->
+                                                    <div class="dbn">
+                                                        <a class="view" href="/student/complaint/{{$value->c_id;}}">
+                                                            <i class="fa-solid fa-eye" title="View grievance"></i>
+                                                        </a>
+                                                        <a class="view" href="/student/complaint/{{$value->c_id;}}/edit">
+                                                            <i class="fa-solid fa-pen-to-square" title="Edit grievance"></i>
+                                                        </a>
+                                                        <form action="/student/complaint/{{$value->c_id;}}" method="POST">
+                                                            @csrf
+                                                            @method('DELETE')
+                                                            <button type="submit" class="dbn1">
+                                                                <a class="view" href=""><i class="fa-solid fa-trash" title="Delete grievance"></i></a>
+                                                            </button>
+                                                        </form>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -89,14 +92,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="margin-top: 25px;">
-                            @include('pagination')
-                        </div>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        @include('pagination')
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- CoreUI and necessary plugins-->
     <script src="vendors/@coreui/coreui/js/coreui.bundle.min.js"></script>
     <script src="vendors/simplebar/js/simplebar.min.js"></script>

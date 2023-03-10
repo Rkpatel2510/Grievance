@@ -25,17 +25,30 @@ i {
 }
 
 .validation-errors {
+
   display: block;
   width: 100%;
   color: red;
 }
 
+.validation-errors2 {
+  position: relative;
+  bottom: 2.5vh;
+}
+
 .dbn {
-  color: #374253;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  position: relative;
+
+
+}
+
+.dbn1 {
+  position: absolute;
+  right: 15px;
+  border: transparent;
   background-color: transparent;
-  border-color: transparent;
-  /* display: inline; */
-  float: right;
-  padding: 0px 21px 2px 2px;
-  /* margin-bottom: 10px; */
 }

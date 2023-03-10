@@ -30,6 +30,7 @@ class studentcomplaintlistController extends Controller
      */
     public function create()
     {
+        //
     }
 
     /**
@@ -69,7 +70,7 @@ class studentcomplaintlistController extends Controller
      */
     public function edit($id)
     {
-       return view('complaint.editpage');
+        return view('complaint.editpage');
     }
 
     /**
@@ -81,7 +82,29 @@ class studentcomplaintlistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $name = $request->input('name');
+        $subject = $request->input('subject');
+        $gsubject = $request->input('gsubject');
+        $vertical = $request->input('vertical');
+        $sem = $request->input('semester');
+        $file = $request->input('filename');
+        $placement = $request->input('gender');
+        $skp = $request->input('skp');
+        $grievance = $request->input('grievance');
+
+        DB::table('complaint')
+            ->where('id', $id)
+            ->update([
+                'name' => $name,
+                'subject' => $subject,
+                'gsubject' => $gsubject,
+                'vertical' => $vertical,
+                'semester' => $sem,
+                'filename' => $file,
+                'gender' => $placement,
+                'skp' => $skp,
+                'gievance' => $grievance
+            ]);
     }
 
     /**
