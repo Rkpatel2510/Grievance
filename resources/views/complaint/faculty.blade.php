@@ -80,7 +80,7 @@
                       <option value="1">BFSI</option>
                       <option value="2">IT</option>
                       <option value="3">MEPS</option>
-                    </select>
+                    </select>z
                     <span class="validation-errors">
                       @error('vertical')
                       {{$message}}

@@ -72,6 +72,10 @@
                                                 <td> {{$records->c_fsem;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
+                                                <th scope="col">Attach file</th>
+                                                <td> {{$records->c_attach;}}</td>
+                                            </tr>
+                                            <tr style="text-align: left;">
                                                 <th scope="col">SKP name</th>
                                                 <td> {{$records->c_skpname;}}</td>
                                             </tr>
@@ -80,15 +84,11 @@
                                                 <td> {{$records->placement;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
-                                                <th scope="col">Attach file</th>
-                                                <td> {{$records->c_attach;}}</td>
-                                            </tr>
-                                            <tr style="text-align: left;">
                                                 <th scope="col">Grievance</th>
                                                 <td> {{$records->c_complaint;}}</td>
                                             </tr>
                                             <tr style="text-align: left;">
-                                                <th scope="col">Date</th>                                             
+                                                <th scope="col">Date</th>
                                                 <td> {{date('d F Y H:i', strtotime($records->c_modified_dt))}}</td>
                                             </tr>
                                         </tbody>

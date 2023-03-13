@@ -36,6 +36,11 @@ i {
   bottom: 2.5vh;
 }
 
+.validation-errors3 {
+  position: relative;
+  bottom: 3.7vh;
+}
+
 .dbn {
   display: flex;
   align-items: center;

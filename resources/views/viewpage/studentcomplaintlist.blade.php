@@ -84,6 +84,7 @@
                                                                 <a class="view" href=""><i class="fa-solid fa-trash" title="Delete grievance"></i></a>
                                                             </button>
                                                         </form>
+                                                    </div>
                                                 </td>
                                             </tr>
                                             @endforeach
@@ -93,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-top: 25px;">
+                    <div style="margin: 25px;">
                         @include('pagination')
                     </div>
                 </div>

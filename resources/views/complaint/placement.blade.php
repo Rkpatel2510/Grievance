@@ -45,7 +45,7 @@
                                 <input type="radio" name="gender" value="Unplaced">
                                 <label for="age3">Unplaced</label>
                                 <p class="text-medium-emphasis"> </p>
-                                <div class="validation-errors">
+                                <div class="validation-errors validation-errors2">
                                     <span>
                                         @error('gender')
                                         {{$message}}
@@ -59,7 +59,7 @@
                                     </span>
                                     <input class="form-control" type="Text" name="skp" placeholder="SKP Name" value="{{old('skp')}}">
                                 </div>
-                                <div class="validation-errors">
+                                <div class="validation-errors validation-errors2">
                                     <span>
                                         @error('skp')
                                         {{$message}}
@@ -70,7 +70,7 @@
                                 <div class="input-group mb-3">
                                     <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
                                 </div>
-                                <div class="validation-errors">
+                                <div class="validation-errors validation-errors2">
                                     <span>
                                         @error('grievance')
                                         {{$message}}

@@ -44,7 +44,7 @@
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
-                <div class="validation-errors">
+                <div class="validation-errors validation-errors2">
                   <span>
                     @error('subject')
                     {{$message}}
@@ -55,7 +55,7 @@
                 <div class="input-group mb-4">
                   <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
                 </div>
-                <div class="validation-errors">
+                <div class="validation-errors validation-errors3">
                   <span>
                     @error('grievance')
                     {{$message}}

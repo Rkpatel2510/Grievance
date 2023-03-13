@@ -45,7 +45,7 @@
                     <i class="fa-solid fa-book"></i></span>
                   <input class="form-control" type="text" name="subject" placeholder="Subject" value="{{old('subject')}}">
                 </div>
-                <div class="validation-errors">
+                <div class="validation-errors validation-errors2">
                   <span>
                     @error('subject')
                     {{$message}}
@@ -56,24 +56,22 @@
                 <div class="input-group mb-4">
                   <textarea class="form-control" type="text" name="grievance" placeholder="Write grievance here"></textarea>
                 </div>
-                <div class="validation-errors">
-                  <span>
-                    @error('grievance')
-                    {{$message}}
-                    @enderror
-                  </span>
-                </div>
+                <span class="validation-errors validation-errors3">
+                  @error('grievance')
+                  {{$message}}
+                  @enderror
+                </span>
+
 
                 <!-- <form action="/action_page.php"> -->
                 <label for="myfile">Attach grievance file:</label>
                 <input type="file" id="myfile" name="name" multiple><br><br>
-                <div class="validation-errors">
-                  <span>
-                    @error('name')
-                    {{$message}}
-                    @enderror
-                  </span>
-                </div>
+                <span class="validation-errors validation-errors3">
+                  @error('name')
+                  {{$message}}
+                  @enderror
+                </span>
+
                 <!-- </form> -->
 
 
