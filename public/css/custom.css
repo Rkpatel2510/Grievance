@@ -20,12 +20,11 @@
   --cui-btn-disabled-border-color: #321fdb;
 }
 
-i {
+i{
   cursor: pointer;
 }
 
 .validation-errors {
-
   display: block;
   width: 100%;
   color: red;
@@ -47,8 +46,6 @@ i {
   justify-content: center;
   column-gap: 10px;
   position: relative;
-
-
 }
 
 .dbn1 {
@@ -56,4 +53,10 @@ i {
   right: 15px;
   border: transparent;
   background-color: transparent;
+}
+
+.success{
+  display: block;
+  width: 15%;
+  margin-left: 30px;
 }

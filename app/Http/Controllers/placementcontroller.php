@@ -44,7 +44,7 @@ class placementcontroller extends Controller
         $grievance = $request->input('grievance');
         DB::insert('insert into complaint (s_id,c_no,c_type,c_skpname,c_complaint,placement) values (?,?,?,?,?,?)', [$s_id,$no,$type, $skp, $grievance,$placement]);
 
-        return redirect('/student/complaint');
+        return redirect('/student/complaint')->withSuccess('Success message');
     }
 
     /**
